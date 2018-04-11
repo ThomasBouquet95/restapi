@@ -1,0 +1,33 @@
+version: '3.2'
+
+services:
+  api:
+    build:
+      context: ./api
+    restart: always
+    command: ['npm', 'run', 'start']
+    volumes:
+      - ./api:/usr/src/app
+    networks:
+      - traefik_webgateway
+      - backend
+    labels:
+      - traefik.enable=true
+      - traefik.frontend.rule=Host:api.asset.localhost
+      - traefik.port=3000
+      - traefik.docker.network=traefik_webgateway
+
+  db:
+    image: mongo
+    networks:
+      - backend
+    volumes:
+      - ./db:/data/db
+
+
+networks:
+  backend:
+    driver: bridge
+  traefik_webgateway:
+    external: true
+

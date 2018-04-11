@@ -1,0 +1,290 @@
+{
+  "address": "0x815ee43a8eb92a0fc40599615796d87e6988a9b0",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "add",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "role",
+          "type": "int256"
+        }
+      ],
+      "name": "addressRegistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "add",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "hash",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "status",
+          "type": "int256"
+        }
+      ],
+      "name": "docRegistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "add",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "hash",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "status",
+          "type": "int256"
+        }
+      ],
+      "name": "docApproved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "add",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "hash",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "status",
+          "type": "int256"
+        }
+      ],
+      "name": "docRefused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "add",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "hash",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "status",
+          "type": "int256"
+        }
+      ],
+      "name": "newVersion",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_add",
+          "type": "address"
+        },
+        {
+          "name": "_type",
+          "type": "int256"
+        }
+      ],
+      "name": "addAddress",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_hash",
+          "type": "uint256"
+        },
+        {
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "name": "_timestamp",
+          "type": "uint256"
+        },
+        {
+          "name": "_hashP",
+          "type": "uint256"
+        }
+      ],
+      "name": "insertDoc",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_hash",
+          "type": "uint256"
+        },
+        {
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "name": "_timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "inserNewDoc",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_hash",
+          "type": "uint256"
+        }
+      ],
+      "name": "approvedDoc",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_hash",
+          "type": "uint256"
+        }
+      ],
+      "name": "refusedDoc",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "getRole",
+      "outputs": [
+        {
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_hash",
+          "type": "uint256"
+        }
+      ],
+      "name": "getDoc",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "int256"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+}
